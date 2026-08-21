@@ -26,8 +26,14 @@
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="python" />
   <img src="https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white" alt="express" />
   <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="tailwind" />
-  <img src="https://img.shields.io/badge/OpenCode-2B5BFF?style=flat" alt="opencode" />
-  <img src="https://img.shields.io/badge/DeepSeek_V4_Flash-6B4EFF?style=flat" alt="deepseek" />
+</p>
+
+<p>
+  <sub>AI models:</sub><br/>
+  <img src="https://img.shields.io/badge/DeepSeek_V4_Flash-6B4EFF?style=flat" alt="DeepSeek V4 Flash" />
+  <img src="https://img.shields.io/badge/DeepSeek_V4_Pro-4F3AFF?style=flat" alt="DeepSeek V4 Pro" />
+  <img src="https://img.shields.io/badge/Muse_Spark_1.2-FF6B35?style=flat" alt="Muse Spark 1.2" />
+  <img src="https://img.shields.io/badge/Gemini_3.5%2F3.6_Flash-4285F4?style=flat&logo=google&logoColor=white" alt="Gemini 3.5/3.6 Flash" />
 </p>
 
 </div>
