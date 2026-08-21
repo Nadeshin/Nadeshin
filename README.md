@@ -75,7 +75,6 @@ $ echo "Sampai jumpa di pelabuhan berikutnya. — Kapten Shiko"
 
 ![Stats](https://github-readme-stats.vercel.app/api?username=Nadeshin&show_icons=true&theme=transparent&hide_border=true&title_color=2B5BFF&icon_color=2B5BFF&text_color=1a2a3a)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Nadeshin&layout=compact&theme=transparent&hide_border=true&title_color=2B5BFF&text_color=1a2a3a)
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=Nadeshin&theme=transparent&hide_border=true&ring=2B5BFF&currStreakLabel=2B5BFF)
 
 *kapten.log · AI-assisted product building · 2026*
 
