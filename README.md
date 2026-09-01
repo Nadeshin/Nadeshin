@@ -9,7 +9,7 @@
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝        ╚═╝   ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝ 
 ```
 
-**Entri ke-12 · Laut lepas · 20 Agustus 2026**
+**Entri ke-14 · Laut lepas · 1 September 2026**
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Mono&pause=1000&color=2B5BFF&width=600&lines=Halo%2C+aku+Dywa+%E2%80%94+Kapten+Shiko+di+sini+%E2%9A%93;AI+sebagai+awak+kapal%2C+bukan+pengambil+keputusan;3+entri+%E2%80%94+2+selamat+%C2%B7+1+tenggelam)](https://git.io/typing-svg)
 
