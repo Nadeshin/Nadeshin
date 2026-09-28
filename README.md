@@ -80,7 +80,7 @@ $ cat prinsip.md
 
 $ ./kontak.sh
 > GitHub  : github.com/Nadeshin
-> Email   : kapten@contoh.email
+> Email   : dywakagami@gmail.com
 > Lokasi  : 20°08′S 106°45′E · angin timur
 
 $ echo "Sampai jumpa di pelabuhan berikutnya. — Kapten Shiko"
