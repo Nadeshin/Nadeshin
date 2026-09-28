@@ -88,8 +88,8 @@ $ echo "Sampai jumpa di pelabuhan berikutnya. — Kapten Shiko"
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=Nadeshin&show_icons=true&theme=transparent&hide_border=true&title_color=2B5BFF&icon_color=2B5BFF&text_color=1a2a3a)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Nadeshin&layout=compact&theme=transparent&hide_border=true&title_color=2B5BFF&text_color=1a2a3a)
+![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Nadeshin&theme=transparent)
+![Top Langs](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Nadeshin&theme=transparent)
 
 *kaptenshiko.log · 3 entri · 2 selamat · 1 tenggelam · 2026*
 
