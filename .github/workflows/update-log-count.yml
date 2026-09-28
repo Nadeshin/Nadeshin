@@ -1,0 +1,71 @@
+name: update-log-count
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update entri count from public repos
+        env:
+          PROFILE_USER: Nadeshin
+          TENGGELAM: 1
+        run: |
+          python3 - <<'PY'
+          import re, urllib.request, json, os, datetime
+
+          user = os.environ.get("PROFILE_USER", "Nadeshin")
+          tenggelam = int(os.environ.get("TENGGELAM", "1"))
+
+          req = urllib.request.Request(
+              f"https://api.github.com/users/{user}",
+              headers={"User-Agent": "kaptenshiko-bot", "Accept": "application/vnd.github+json"},
+          )
+          with urllib.request.urlopen(req, timeout=30) as r:
+              data = json.load(r)
+          total = int(data.get("public_repos", 0))
+          selamat = max(total - tenggelam, 0)
+          year = str(datetime.datetime.now().year)
+
+          p = "README.md"
+          s = open(p, encoding="utf-8").read()
+
+          # 1. typing-svg segment: 4+entri+%E2%80%94+3+selamat+%C2%B7+1+tenggelam
+          s = re.sub(
+              r"\d+\+entri\+%E2%80%94\+\d+\+selamat\+%C2%B7\+\d+\+tenggelam",
+              f"{total}+entri+%E2%80%94+{selamat}+selamat+%C2%B7+{tenggelam}+tenggelam",
+              s,
+          )
+          # 2. Peta pelayaran: 4 entri · 3 selamat · 1 tenggelam
+          s = re.sub(
+              r"Peta pelayaran: \d+ entri · \d+ selamat · \d+ tenggelam",
+              f"Peta pelayaran: {total} entri · {selamat} selamat · {tenggelam} tenggelam",
+              s,
+          )
+          # 3. footer: kaptenshiko.log · 3 entri · 2 selamat · 1 tenggelam · 2026
+          s = re.sub(
+              r"kaptenshiko\.log · \d+ entri · \d+ selamat · \d+ tenggelam · \d{4}",
+              f"kaptenshiko.log · {total} entri · {selamat} selamat · {tenggelam} tenggelam · {year}",
+              s,
+          )
+
+          open(p, "w", encoding="utf-8").write(s)
+          print(f"entri={total} selamat={selamat} tenggelam={tenggelam} year={year}")
+          PY
+
+      - name: Commit if changed
+        run: |
+          git diff --quiet && echo "no change" && exit 0
+          git config user.name "kaptenshiko-bot"
+          git config user.email "kaptenshiko-bot@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: auto update entri count"
+          git push
