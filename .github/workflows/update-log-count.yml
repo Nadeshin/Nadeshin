@@ -21,23 +21,59 @@ jobs:
         run: |
           python3 - <<'PY'
           import re, urllib.request, json, os, datetime
+          from zoneinfo import ZoneInfo
 
           user = os.environ.get("PROFILE_USER", "Nadeshin")
           tenggelam = int(os.environ.get("TENGGELAM", "1"))
 
-          req = urllib.request.Request(
-              f"https://api.github.com/users/{user}",
-              headers={"User-Agent": "kaptenshiko-bot", "Accept": "application/vnd.github+json"},
-          )
-          with urllib.request.urlopen(req, timeout=30) as r:
-              data = json.load(r)
+          def gh(url):
+              req = urllib.request.Request(
+                  url,
+                  headers={"User-Agent": "kaptenshiko-bot", "Accept": "application/vnd.github+json"},
+              )
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return json.load(r)
+
+          data = gh(f"https://api.github.com/users/{user}")
           total = int(data.get("public_repos", 0))
           selamat = max(total - tenggelam, 0)
-          year = str(datetime.datetime.now().year)
+
+          # tanggal = repo publik dengan created_at paling baru (konversi ke WIB)
+          wib = ZoneInfo("Asia/Jakarta")
+          latest = None
+          page = 1
+          while True:
+              repos = gh(f"https://api.github.com/users/{user}/repos?type=public&per_page=100&page={page}&sort=created&direction=desc")
+              if not repos:
+                  break
+              for repo in repos:
+                  dt = datetime.datetime.fromisoformat(repo["created_at"].replace("Z", "+00:00"))
+                  if latest is None or dt > latest:
+                      latest = dt
+              if len(repos) < 100:
+                  break
+              page += 1
+
+          bulan = ["", "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                   "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+          if latest is not None:
+              lokal = latest.astimezone(wib)
+              tanggal = f"{lokal.day} {bulan[lokal.month]} {lokal.year}"
+              year = str(lokal.year)
+          else:
+              tanggal = None
+              year = str(datetime.datetime.now(wib).year)
 
           p = "README.md"
           s = open(p, encoding="utf-8").read()
 
+          # 0. header: **Entri ke-14 · Laut lepas · 1 September 2026**
+          if tanggal is not None:
+              s = re.sub(
+                  r"\*\*Entri ke-\d+ · Laut lepas · .*?\*\*",
+                  f"**Entri ke-{total} · Laut lepas · {tanggal}**",
+                  s,
+              )
           # 1. typing-svg segment: 4+entri+%E2%80%94+3+selamat+%C2%B7+1+tenggelam
           s = re.sub(
               r"\d+\+entri\+%E2%80%94\+\d+\+selamat\+%C2%B7\+\d+\+tenggelam",
@@ -58,7 +94,7 @@ jobs:
           )
 
           open(p, "w", encoding="utf-8").write(s)
-          print(f"entri={total} selamat={selamat} tenggelam={tenggelam} year={year}")
+          print(f"entri={total} selamat={selamat} tenggelam={tenggelam} tanggal={tanggal} year={year}")
           PY
 
       - name: Commit if changed
