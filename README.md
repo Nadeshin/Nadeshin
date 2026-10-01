@@ -9,9 +9,9 @@
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝        ╚═╝   ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝ ╚═════╝ 
 ```
 
-**Entri ke-4 · Laut lepas · 28 September 2026**
+**Entri ke-5 · Laut lepas · 29 September 2026**
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Mono&pause=1000&color=2B5BFF&width=600&lines=Halo%2C+aku+Dywa+%E2%80%94+Kapten+Shiko+di+sini+%E2%9A%93;AI+sebagai+awak+kapal%2C+bukan+pengambil+keputusan;4+entri+%E2%80%94+3+selamat+%C2%B7+1+tenggelam)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Mono&pause=1000&color=2B5BFF&width=600&lines=Halo%2C+aku+Dywa+%E2%80%94+Kapten+Shiko+di+sini+%E2%9A%93;AI+sebagai+awak+kapal%2C+bukan+pengambil+keputusan;5+entri+%E2%80%94+4+selamat+%C2%B7+1+tenggelam)](https://git.io/typing-svg)
 
 <p>
   <img src="https://komarev.com/ghpvc/?username=Nadeshin&label=views&color=2B5BFF&style=flat" alt="profile views" />
@@ -48,7 +48,7 @@ $ cat tentang.txt
 > Aku membangun produk dengan AI sebagai awak kapal, bukan pengambil keputusan.
 > AI membantuku berpikir lebih cepat, membuat prototipe lebih banyak,
 > dan menguji ide tanpa menunggu lama — tapi arahnya tetap aku yang tentukan.
-> Peta pelayaran: 4 entri · 3 selamat · 1 tenggelam
+> Peta pelayaran: 5 entri · 4 selamat · 1 tenggelam
 
 $ cat cara-berlayar.txt
 > Coba  → ide kecil → prototipe sehari
@@ -91,6 +91,6 @@ $ echo "Sampai jumpa di pelabuhan berikutnya. — Kapten Shiko"
 ![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Nadeshin&theme=transparent)
 ![Top Langs](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Nadeshin&theme=transparent)
 
-*kaptenshiko.log · 4 entri · 3 selamat · 1 tenggelam · 2026*
+*kaptenshiko.log · 5 entri · 4 selamat · 1 tenggelam · 2026*
 
 </div>
